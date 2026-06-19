@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  create-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create Issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --title "📌 Написання технічного завдання" --body "Описати ML pipeline, цілі та задачу" --repo $GITHUB_REPOSITORY
+          gh issue create --title "📊 Формування датасету" --body "Збір, очистка та підготовка даних" --repo $GITHUB_REPOSITORY
+          gh issue create --title "🤖 Вибір та запуск моделі" --body "Навчання ML моделі та тестування" --repo $GITHUB_REPOSITORY
+          gh issue create --title "📈 Оцінка метрик" --body "Accuracy, Precision, Recall, F1-score" --repo $GITHUB_REPOSITORY
+          gh issue create --title "📝 Фінальний звіт" --body "Підсумковий аналіз результатів" --repo $GITHUB_REPOSITORY

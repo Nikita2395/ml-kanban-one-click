@@ -1,0 +1,10 @@
+dataset_pcs.csv
+forecast_of_market_dataset.csv
+forecast_revenue_dataset.csv
+
+Model pcs.ipynb (прогноз продажів товарів)
+Model market.ipynb (прогноз ринку)
+Model money.ipynb (прогноз товарообігу)
+
+three_phase_linear.ipynb
+build_notebooks.ipynb
